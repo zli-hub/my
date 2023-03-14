@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ex.c1.springtest.mapper.BalanceDetailMapper">
+	<insert id="insertBalanceDetail" parameterType="com.ex.c1.springtest.obj.BalanceDetail">
+		insert into user_balance_detail 
+            (id,user_uuid,incoming,outgoing,user_balance,create_time,change_type,detail) 
+        values
+            (0,#{bd.userUuid},#{bd.incoming},#{bd.outgoing},#{bd.userBalance},now(),
+            #{bd.changeType},#{bd.detail})
+	</insert>
+	
+</mapper>
